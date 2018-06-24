@@ -27,7 +27,6 @@
             <ImageView
                 android:id="@+id/imageOffice"
                 android:layout_width="match_parent"
-                android:src="@drawable/ic_home"
                 android:layout_height="194dp" />
 
             <LinearLayout
@@ -87,7 +86,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_like2"
+                        android:src="@drawable/ic_star"
                         android:id="@+id/officeButtonLike"
                         android:layout_margin="8dp"
                         android:layout_width="24dp"
@@ -109,7 +108,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_chat"
+                        android:src="@drawable/ic_comment"
                         android:id="@+id/officeButtonComment"
                         android:layout_width="24dp"
                         android:layout_height="24dp"

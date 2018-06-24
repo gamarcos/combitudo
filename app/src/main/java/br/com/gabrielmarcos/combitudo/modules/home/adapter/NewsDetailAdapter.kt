@@ -1,4 +1,4 @@
-package br.com.gabrielmarcos.combitudo.modules.discussion.adapter
+package br.com.gabrielmarcos.combitudo.modules.home.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,16 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.gabrielmarcos.combitudo.R
 import br.com.gabrielmarcos.combitudo.models.discussion.DiscussionModel
-import kotlinx.android.synthetic.main.adapter_discussion.view.*
 
-class DiscussionAdapter(private val discussionModel: ArrayList<DiscussionModel>,
+class NewsDetailAdapter(private val discussionModel: ArrayList<DiscussionModel>,
                         private val context: Context,
-                        private val listener: DiscussionAdapterListener): RecyclerView.Adapter<DiscussionAdapter.ViewHolder>() {
+                        private val listener: NewsDetailAdapterListener): RecyclerView.Adapter<NewsDetailAdapter.ViewHolder>() {
 
-    interface DiscussionAdapterListener {
+    interface NewsDetailAdapterListener {
         fun onDiscussionLikedClicked()
         fun onDiscussionCommentClicked()
-        fun onDiscussionCardClicked()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,11 +30,9 @@ class DiscussionAdapter(private val discussionModel: ArrayList<DiscussionModel>,
         holder.bindView(discussionModel[position])
     }
 
-    class ViewHolder(itemView: View, val listener: DiscussionAdapterListener, val context: Context): RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View, val listener: NewsDetailAdapterListener, val context: Context): RecyclerView.ViewHolder(itemView){
         fun bindView(discussionModel: DiscussionModel) {
-            itemView.cardViewDiscussion.setOnClickListener {
-                listener.onDiscussionCardClicked()
-            }
+
         }
     }
 }

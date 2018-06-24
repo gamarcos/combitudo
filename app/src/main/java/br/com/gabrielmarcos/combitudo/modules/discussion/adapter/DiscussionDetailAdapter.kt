@@ -7,20 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.gabrielmarcos.combitudo.R
 import br.com.gabrielmarcos.combitudo.models.discussion.DiscussionModel
-import kotlinx.android.synthetic.main.adapter_discussion.view.*
 
-class DiscussionAdapter(private val discussionModel: ArrayList<DiscussionModel>,
-                        private val context: Context,
-                        private val listener: DiscussionAdapterListener): RecyclerView.Adapter<DiscussionAdapter.ViewHolder>() {
+class DiscussionDetailAdapter(private val discussionModel: ArrayList<DiscussionModel>,
+                              private val context: Context,
+                              private val listener: DiscussionDetailAdapterListener): RecyclerView.Adapter<DiscussionDetailAdapter.ViewHolder>() {
 
-    interface DiscussionAdapterListener {
+    interface DiscussionDetailAdapterListener {
         fun onDiscussionLikedClicked()
-        fun onDiscussionCommentClicked()
-        fun onDiscussionCardClicked()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.adapter_discussion, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.adapter_replace_discussion, parent, false)
         return ViewHolder(view, listener, context)
     }
 
@@ -32,11 +29,9 @@ class DiscussionAdapter(private val discussionModel: ArrayList<DiscussionModel>,
         holder.bindView(discussionModel[position])
     }
 
-    class ViewHolder(itemView: View, val listener: DiscussionAdapterListener, val context: Context): RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View, val listener: DiscussionDetailAdapterListener, val context: Context) : RecyclerView.ViewHolder(itemView) {
         fun bindView(discussionModel: DiscussionModel) {
-            itemView.cardViewDiscussion.setOnClickListener {
-                listener.onDiscussionCardClicked()
-            }
+
         }
     }
 }

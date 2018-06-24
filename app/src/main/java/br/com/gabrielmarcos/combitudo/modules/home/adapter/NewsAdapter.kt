@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.gabrielmarcos.combitudo.R
 import br.com.gabrielmarcos.combitudo.models.home.HomeNewsModel
+import kotlinx.android.synthetic.main.adapter_home_news.view.*
 
 class NewsAdapter(private val newsModel: ArrayList<HomeNewsModel>,
                   private val context: Context,
@@ -16,6 +17,7 @@ class NewsAdapter(private val newsModel: ArrayList<HomeNewsModel>,
     interface NewsAdapterListener {
         fun onLikedClicked()
         fun onCommentClicked()
+        fun onCardNewsClicked()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,7 +35,13 @@ class NewsAdapter(private val newsModel: ArrayList<HomeNewsModel>,
 
     class ViewHolder(itemView: View, val listener: NewsAdapterListener, val context: Context): RecyclerView.ViewHolder(itemView){
         fun bindView(news: HomeNewsModel) {
+            itemView.cardViewNewsHome.setOnClickListener {
+                listener.onCardNewsClicked()
+            }
 
+            itemView.newsButtonLike.setOnClickListener {
+                listener.onLikedClicked()
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 package br.com.gabrielmarcos.combitudo.modules.home
 
+import android.content.Intent
 import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.support.design.widget.TabLayout
@@ -12,9 +13,12 @@ import br.com.gabrielmarcos.combitudo.models.home.HomeEventsModel
 import br.com.gabrielmarcos.combitudo.models.home.HomeNewsModel
 import br.com.gabrielmarcos.combitudo.modules.home.adapter.EventsAdapter
 import br.com.gabrielmarcos.combitudo.modules.home.adapter.NewsAdapter
+import kotlinx.android.synthetic.main.adapter_home_news.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment: Fragment(), NewsAdapter.NewsAdapterListener, EventsAdapter.EventsAdapterListener {
+
+    private var hasLiked: Boolean = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_home, null)
@@ -82,18 +86,23 @@ class HomeFragment: Fragment(), NewsAdapter.NewsAdapterListener, EventsAdapter.E
     }
 
     override fun onLikedClicked() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if (!hasLiked) {
+            newsButtonLike.setImageResource(R.drawable.ic_like)
+            hasLiked = true
+        } else {
+            newsButtonLike.setImageResource(R.drawable.ic_like2)
+            hasLiked = false
+        }
     }
 
-    override fun onCommentClicked() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onCommentClicked() {}
 
-    override fun onEventLikedClicked() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onEventLikedClicked() {}
 
-    override fun onEventCommentClicked() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onEventCommentClicked() {}
+
+    override fun onCardNewsClicked() {
+        val intent = Intent(context, HomeNewsActivity::class.java)
+        startActivity(intent)
     }
 }

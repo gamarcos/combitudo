@@ -183,7 +183,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/roudend_button"
             android:textColor="@android:color/white"
             android:layout_margin="16dp"
             android:layout_marginTop="40dp"

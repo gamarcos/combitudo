@@ -26,7 +26,6 @@
             <ImageView
                 android:id="@+id/thumbVideoTraining"
                 android:layout_width="match_parent"
-                android:src="@drawable/ic_home"
                 android:layout_height="194dp" />
 
             <LinearLayout

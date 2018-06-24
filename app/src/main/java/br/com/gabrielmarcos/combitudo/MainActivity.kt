@@ -22,7 +22,7 @@ class MainActivity : FragmentActivity() {
 
         loadFragment(0)
 
-        bottomNavigation.setOnNavigationItemReselectedListener {
+        bottomMenuNavigation.setOnNavigationItemReselectedListener {
             when (it.itemId) {
                 R.id.bottomNavigationHome -> loadFragment(0)
                 R.id.bottomNavigationDiscussion -> loadFragment(1)

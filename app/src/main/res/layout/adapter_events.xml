@@ -26,7 +26,6 @@
             <ImageView
                 android:id="@+id/imageViewEvent"
                 android:layout_width="match_parent"
-                android:src="@drawable/ic_home"
                 android:layout_height="194dp" />
 
             <LinearLayout
@@ -39,7 +38,6 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/eventHomeImage"
-                    android:src="@drawable/ic_home"
                     android:layout_width="50dp"
                     android:layout_marginEnd="16dp"
                     android:layout_height="50dp" />
@@ -135,7 +133,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_star"
+                        android:src="@drawable/ic_like2"
                         android:id="@+id/newsButtonLike"
                         android:layout_margin="8dp"
                         android:layout_width="24dp"

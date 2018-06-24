@@ -1,5 +1,6 @@
 package br.com.gabrielmarcos.combitudo.modules.discussion
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -8,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.gabrielmarcos.combitudo.R
 import br.com.gabrielmarcos.combitudo.models.discussion.DiscussionModel
+import br.com.gabrielmarcos.combitudo.modules.discussion.activity.DiscussionActivity
 import br.com.gabrielmarcos.combitudo.modules.discussion.adapter.DiscussionAdapter
 import kotlinx.android.synthetic.main.fragment_discussion.*
 
@@ -46,5 +48,10 @@ class DiscussionFragment: Fragment(), DiscussionAdapter.DiscussionAdapterListene
 
     override fun onDiscussionCommentClicked() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onDiscussionCardClicked() {
+        val intent = Intent(context, DiscussionActivity::class.java)
+        startActivity(intent)
     }
 }
