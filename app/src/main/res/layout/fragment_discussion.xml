@@ -11,7 +11,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:elevation="0dp">
+        app:elevation="100dp"
+        android:elevation="100dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_create_question"

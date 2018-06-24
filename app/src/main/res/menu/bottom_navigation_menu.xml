@@ -4,32 +4,32 @@
     <item
         android:id="@+id/bottomNavigationHome"
         android:enabled="true"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/bottom_navigation_menu_home"
         android:title="Home"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/bottomNavigationDiscussion"
         android:enabled="true"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/bottom_navigation_menu_discussion"
         android:title="Discussão"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/bottomNavigationOffice"
         android:enabled="true"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/bottom_navigation_menu_office"
         android:title="Serviços"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/bottomNavigationTraining"
         android:enabled="true"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/bottom_navigation_menu_capacitation"
         android:title="Capacitação"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/bottomNavigationProfile"
         android:enabled="true"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/bottom_navigation_menu_profile"
         android:title="Profile"
         app:showAsAction="ifRoom" />
 </menu>

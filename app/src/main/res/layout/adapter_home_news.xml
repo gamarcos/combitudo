@@ -89,7 +89,7 @@ elit, sed do eiusmod tempor "
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_home"
+                        android:src="@drawable/ic_like2"
                         android:id="@+id/newsButtonLike"
                         android:layout_margin="8dp"
                         android:layout_width="24dp"
@@ -111,7 +111,7 @@ elit, sed do eiusmod tempor "
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_home"
+                        android:src="@drawable/ic_comment"
                         android:id="@+id/newsButtonComment"
                         android:layout_width="24dp"
                         android:layout_height="24dp"

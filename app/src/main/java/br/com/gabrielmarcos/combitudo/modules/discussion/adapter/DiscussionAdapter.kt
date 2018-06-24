@@ -12,7 +12,6 @@ class DiscussionAdapter(private val discussionModel: ArrayList<DiscussionModel>,
                         private val context: Context,
                         private val listener: DiscussionAdapterListener): RecyclerView.Adapter<DiscussionAdapter.ViewHolder>() {
 
-
     interface DiscussionAdapterListener {
         fun onDiscussionLikedClicked()
         fun onDiscussionCommentClicked()
@@ -36,5 +35,4 @@ class DiscussionAdapter(private val discussionModel: ArrayList<DiscussionModel>,
 
         }
     }
-
 }

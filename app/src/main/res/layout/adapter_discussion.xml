@@ -7,7 +7,8 @@
     <android.support.v7.widget.CardView
         android:id="@+id/cardViewDiscussion"
         android:layout_width="match_parent"
-        android:layout_height="228dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="228dp"
         android:layout_margin="16dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
@@ -54,9 +55,9 @@
                 android:textColor="@color/grayScale2"
                 android:text="Lorem ipsum dolor itamet,consecteturadipisicing
 elit, sed do eiusmod tempor "
+                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginStart="16dp"/>
 
             <TextView
                 android:id="@+id/newsHomePeoplesLiked"
@@ -81,7 +82,7 @@ elit, sed do eiusmod tempor "
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_home"
+                        android:src="@drawable/ic_like2"
                         android:id="@+id/newsButtonLike"
                         android:layout_margin="8dp"
                         android:layout_width="24dp"
@@ -103,7 +104,7 @@ elit, sed do eiusmod tempor "
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:src="@drawable/ic_home"
+                        android:src="@drawable/ic_comment"
                         android:id="@+id/newsButtonComment"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
